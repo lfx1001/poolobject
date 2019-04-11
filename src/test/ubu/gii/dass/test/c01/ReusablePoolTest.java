@@ -77,7 +77,17 @@ public class ReusablePoolTest {
 	 */
 	@Test
 	public void testReleaseReusable() {
-		fail("Not yet implemented");
+		Reusable reusable = null;
+		try {
+			reusable = reusablePool.acquireReusable();
+			reusablePool.releaseReusable(reusable);
+			reusablePool.releaseReusable(reusable);
+			fail("debe lanzar una excepcion cuando se intenta liberar una instancia que ya existe");
+		} catch (NotFreeInstanceException e) {
+			fail("debe recuperar una instancia de objeto Reusable");
+		} catch (DuplicatedInstanceException e) {
+		}
+
 	}
 
 }
