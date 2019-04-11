@@ -9,6 +9,9 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import ubu.gii.dass.c01.DuplicatedInstanceException;
+import ubu.gii.dass.c01.NotFreeInstanceException;
+import ubu.gii.dass.c01.Reusable;
 import ubu.gii.dass.c01.ReusablePool;
 
 /**
@@ -18,7 +21,7 @@ import ubu.gii.dass.c01.ReusablePool;
 public class ReusablePoolTest {
 
 	static ReusablePool reusablePool = null;
-	
+
 	/**
 	 * @throws java.lang.Exception
 	 */
@@ -48,11 +51,29 @@ public class ReusablePoolTest {
 	 */
 	@Test
 	public void testAcquireReusable() {
-		fail("Not yet implemented");
+		Reusable firstReusable = null, secondReusable = null;
+		try {
+			firstReusable = reusablePool.acquireReusable();
+			secondReusable = reusablePool.acquireReusable();
+			reusablePool.acquireReusable();
+			fail("debe lanzar una excepcion cuando el pool está vacío");
+		} catch (NotFreeInstanceException e) {
+			assertNotNull("debe recuperar una instancia de objeto Reusable", firstReusable);
+			assertNotNull("debe recuperar una instancia de objeto Reusable", secondReusable);
+			// devolvemos al pool los dos objetos
+			try {
+				reusablePool.releaseReusable(firstReusable);
+				reusablePool.releaseReusable(secondReusable);
+			} catch (DuplicatedInstanceException e1) {
+				fail("debe permitir devolver la instancia de Reusable");
+			}
+
+		}
 	}
 
 	/**
-	 * Test method for {@link ubu.gii.dass.c01.ReusablePool#releaseReusable(ubu.gii.dass.c01.Reusable)}.
+	 * Test method for
+	 * {@link ubu.gii.dass.c01.ReusablePool#releaseReusable(ubu.gii.dass.c01.Reusable)}.
 	 */
 	@Test
 	public void testReleaseReusable() {
