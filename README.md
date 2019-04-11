@@ -41,7 +41,7 @@ El trabajo se ha realizado de forma individual
 
 ### ¿Tiene calidad el conjunto de pruebas disponibles?
 
-La cobertura de test alcanzada sobre la clase PoolObject ha sido de 100%, cubriendo 
+La cobertura de test alcanzada sobre la clase ReusablePool ha sido de 100%, cubriendo 
 todos los caminos lógicos del código. Este hecho nos indica que la cobertura es buena.
 
 ![Cobertura Final](/images/3_releaseReusableTest.png)
