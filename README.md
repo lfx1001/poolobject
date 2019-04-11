@@ -1,6 +1,6 @@
+# Proceso de prueba y cobertura
 [![Build Status](https://travis-ci.org/lfx1001/poolobject.svg?branch=master)](https://travis-ci.org/lfx1001/poolobject)
 [![codecov](https://codecov.io/gh/lfx1001/poolobject/branch/master/graph/badge.svg)](https://codecov.io/gh/lfx1001/poolobject)
-# Proceso de prueba y cobertura
 ## Objetivos de la práctica
 * Comprender los objetivos de medición relacionados con la caracterización y la evaluación de
 productos, procesos y recursos software
@@ -43,17 +43,19 @@ El trabajo se ha realizado de forma individual
 
 La cobertura de test alcanzada sobre la clase PoolObject ha sido de 100%, cubriendo 
 todos los caminos lógicos del código. Este hecho nos indica que la cobertura es buena.
+
 ![Cobertura Final](/images/3_releaseReusableTest.png)
+
 Se proponen dos mejoras sobre las mismas:
 * Añadir pruebas de comportamiento del método releaseReusable cuando recibe un parámetro nulo
 * Dividir alguno de los métodos de prueba para realizar pruebas exclusivas de lanzamiento
-de excepciones utilizando el atributo (expected)[https://junit.org/junit4/faq.html#atests_7] .  
+de excepciones utilizando el atributo [expected](https://junit.org/junit4/faq.html#atests_7)  
 
-###¿Cuál es el esfuerzo invertido en realizar la actividad?
+### ¿Cuál es el esfuerzo invertido en realizar la actividad?
 
 Aproximadamente, he invertido 4-5 horas
 
-###¿Cuál es el número de fallos encontrados en el código?
+### ¿Cuál es el número de fallos encontrados en el código?
 
 No se han localizado errores al ejecutar la batería de test implementada.
 Se ha realizado una inspección manual del código de la clase PoolObject y
