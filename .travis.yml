@@ -1,3 +1,10 @@
 language: java
+addons:
+  sonarcloud:
+    organization: "lfx1001" # the key of the org you chose at step #3
+    token:
+      secure: e0228b4f9f24438a1bded3378e98208bca878c13 
+script:
+  - sonar-scanner
 after_success:
   - bash <(curl -s https://codecov.io/bash)
