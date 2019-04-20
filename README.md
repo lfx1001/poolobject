@@ -1,6 +1,7 @@
 # Proceso de prueba y cobertura
 [![Build Status](https://travis-ci.org/lfx1001/poolobject.svg?branch=master)](https://travis-ci.org/lfx1001/poolobject)
 [![codecov](https://codecov.io/gh/lfx1001/poolobject/branch/master/graph/badge.svg)](https://codecov.io/gh/lfx1001/poolobject)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=lfx1001poolobject&metric=alert_status)](https://sonarcloud.io/dashboard?id=lfx1001poolobject)
 ## Objetivos de la práctica
 * Comprender los objetivos de medición relacionados con la caracterización y la evaluación de
 productos, procesos y recursos software
